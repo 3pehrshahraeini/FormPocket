@@ -33,27 +33,32 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/Station.html"
     });
 
+    $routeProvider.when("/home", {
+        controller: "HomeController",
+        templateUrl: "/app/views/Home.html"
+    });
 
 
-    $routeProvider.otherwise({ redirectTo: "/security" });
+
+    $routeProvider.otherwise({ redirectTo: "/home" });
 
 
 
 });
 
 
-app.run([ '$rootScope', '$location', '$templateCache', function ($rootScope, $location, $templateCache) {
+app.run(['$rootScope', '$location', '$templateCache', function ($rootScope, $location, $templateCache) {
 
 
-$rootScope.navigate = function (target, key, module) {
+    $rootScope.navigate = function (target, key, module) {
 
-    //var rec = Enumerable.From(Config.MenuItems).Where('$.key=="' + key + '"').FirstOrDefault();
-    //activityService.hitMenu(key, target, 'Visiting ' + $rootScope.module + ' > ' + rec.title, module);
+        //var rec = Enumerable.From(Config.MenuItems).Where('$.key=="' + key + '"').FirstOrDefault();
+        //activityService.hitMenu(key, target, 'Visiting ' + $rootScope.module + ' > ' + rec.title, module);
 
-    $location.path(target);
+        $location.path(target);
 
 
-};
+    };
 }]);
 
 

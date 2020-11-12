@@ -71,6 +71,7 @@
     <Content Include="app\controllers\DispatchController.js" />
     <Content Include="app\controllers\FlightCrewController.js" />
     <Content Include="app\controllers\FooterController.js" />
+    <Content Include="app\controllers\HomeController.js" />
     <Content Include="app\controllers\PilotController.js" />
     <Content Include="app\controllers\SecurityController.js" />
     <Content Include="app\controllers\StationController.js" />
@@ -78,6 +79,7 @@
     <Content Include="app\views\Dispatch.html" />
     <Content Include="app\views\FlightCrew.html" />
     <Content Include="app\views\Footer.html" />
+    <Content Include="app\views\Home.html" />
     <Content Include="app\views\Pilot.html" />
     <Content Include="app\views\Security.html" />
     <Content Include="app\views\Station.html" />
@@ -133,6 +135,9 @@
     <Content Include="content\fonts\fontawesome-webfont.svg" />
     <Content Include="content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="content\fonts\ionicons.svg" />
+    <Content Include="content\webfonts\fa-brands-400.svg" />
+    <Content Include="content\webfonts\fa-regular-400.svg" />
+    <Content Include="content\webfonts\fa-solid-900.svg" />
     <Content Include="index.html" />
     <Content Include="scripts\angular-1.7.2.js" />
     <Content Include="scripts\angular-animate.js" />
@@ -275,6 +280,18 @@
     <Content Include="content\fonts\Roboto-500.woff2" />
     <Content Include="content\fonts\SourceSansPro-ExtraLight.ttf" />
     <Content Include="content\fonts\SourceSansPro-Light.ttf" />
+    <Content Include="content\webfonts\fa-brands-400.eot" />
+    <Content Include="content\webfonts\fa-brands-400.ttf" />
+    <Content Include="content\webfonts\fa-brands-400.woff" />
+    <Content Include="content\webfonts\fa-brands-400.woff2" />
+    <Content Include="content\webfonts\fa-regular-400.eot" />
+    <Content Include="content\webfonts\fa-regular-400.ttf" />
+    <Content Include="content\webfonts\fa-regular-400.woff" />
+    <Content Include="content\webfonts\fa-regular-400.woff2" />
+    <Content Include="content\webfonts\fa-solid-900.eot" />
+    <Content Include="content\webfonts\fa-solid-900.ttf" />
+    <Content Include="content\webfonts\fa-solid-900.woff" />
+    <Content Include="content\webfonts\fa-solid-900.woff2" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
