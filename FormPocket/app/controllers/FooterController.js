@@ -66,6 +66,7 @@
         $('.footerdispatch').width('16.66%').hide();
     }
 
+    
     //$scope.$on('ShowFooterItems', function (event, prms) {
     //    //footerbook
     //    if (prms == '84') {
