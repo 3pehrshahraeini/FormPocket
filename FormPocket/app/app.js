@@ -1,4 +1,4 @@
-﻿
+
 var app = angular.module('FormPocketApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar', 'dx', 'ngSanitize', 'ngAnimate']).config(['cfpLoadingBarProvider', function (cfpLoadingBarProvider) {
     cfpLoadingBarProvider.includeSpinner = false;
 }]);
@@ -51,13 +51,15 @@ app.run(['$rootScope', '$location', '$templateCache', function ($rootScope, $loc
 
 
     $rootScope.navigate = function (target, key, module) {
-
         //var rec = Enumerable.From(Config.MenuItems).Where('$.key=="' + key + '"').FirstOrDefault();
         //activityService.hitMenu(key, target, 'Visiting ' + $rootScope.module + ' > ' + rec.title, module);
-
         $location.path(target);
 
+    };
 
+    $rootScope.linkClicked = function (key) {
+
+        $rootScope.$broadcast(key, null);
     };
 }]);
 
