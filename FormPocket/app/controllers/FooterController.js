@@ -81,6 +81,6 @@
 
 
     //});
-    //$rootScope.$broadcast('PageLoaded', 'footer');
+    $rootScope.$broadcast('PageLoaded', 'footer');
     //end scope
 });
