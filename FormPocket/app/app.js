@@ -48,7 +48,16 @@ app.config(function ($routeProvider) {
 
 
 app.run(['$rootScope', '$location', '$templateCache', function ($rootScope, $location, $templateCache) {
+    $rootScope.app_title = 'FormPocket';
+    $rootScope.page_title = '';
+    $rootScope.theme = 'material.orange-light';
+    $rootScope.setTheme = function () {
 
+        DevExpress.ui.themes.current($rootScope.theme);
+
+
+    };
+    $rootScope.setTheme();
 
     $rootScope.navigate = function (target, key, module) {
         //var rec = Enumerable.From(Config.MenuItems).Where('$.key=="' + key + '"').FirstOrDefault();

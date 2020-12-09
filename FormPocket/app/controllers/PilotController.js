@@ -6,17 +6,23 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         $scope.popup_new_visible = true;
     });
 
-    $scope.visiblePopup = false;
+    
+
+
+    $scope.popup_new_visible = false;
     $scope.popup_new = {
         shading: false,
         fullScreen: true,
         showTitle: true,
         dragEnabled: true,
-  
+        title:'Pilot Forms',
         visible: false,
 
         closeOnOutsideClick: false,
-        
+        toolbarItems: [
+ 
+            { widget: 'dxButton', location: 'after', options: { type: 'danger', text: 'Close', icon: 'remove', onClick: function (e) { $scope.popup_new_visible = false; } }, toolbar: 'bottom' }
+        ],
         bindingOptions: {
             visible: 'popup_new_visible',
 
@@ -25,7 +31,7 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
     };
 
 
-    $scope.visiblePopup = false;
+    $scope.popup_ASR_visible = false;
     $scope.popup_ASR = {
         fullScreen: true,
         showTitle: true,
@@ -33,34 +39,45 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         dragEnabled: true,
         visible: true,
         closeOnOutsideClick: false,
-       
+        toolbarItems: [
+
+
+            {
+                widget: 'dxButton', location: 'after', options: {
+                    type: 'success', text: 'Save', icon: 'check', validationGroup: 'asr',   onClick: function (arg) {
+                        
+                        //var result = arg.validationGroup.validate();
+
+                        //if (!result.isValid) {
+                        //    General.ShowNotify(Config.Text_FillRequired, 'error');
+                        //    return;
+                        //}
+                        
+                    },
+
+
+                }, toolbar: 'bottom'
+            },
+
+            { widget: 'dxButton', location: 'after', options: { type: 'danger', text: 'Close', icon: 'remove', onClick: function (e) { $scope.popup_ASR_visible = false; } }, toolbar: 'bottom' }
+        ],
         bindingOptions: {
             visible: 'popup_ASR_visible',
         }
     };
 
-    $scope.btn_save = {
-        text: 'save',
-        rtlEnabled: false,
-        onClick: function (e) {
-            console.log("saved")
-        }
-    };
+    
 
     $scope.btn_asr = {
         text: 'ASR',
+        type: 'normal',
+        width:'100%',
         onClick: function (e) {
             $scope.popup_ASR_visible = true;
-            $scope.popup_new_visible = false;
+            
         }
     };
 
-    $scope.btn_close = {
-        text: 'close',
-        rtlEnabled: false,
-        onClick: function (e) {
-            $scope.popup_ASR_visible = false;
-        }
-    };
+    
 
 }]);

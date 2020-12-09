@@ -79,6 +79,7 @@
     <Content Include="app\views\Dispatch.html" />
     <Content Include="app\views\FlightCrew.html" />
     <Content Include="app\views\Footer.html" />
+    <Content Include="app\views\header.html" />
     <Content Include="app\views\Home.html" />
     <Content Include="app\views\Pilot.html" />
     <Content Include="app\views\Security.html" />
@@ -316,7 +317,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57146</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44361/</IISUrl>
+          <IISUrl>http://localhost:44123/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:44123/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
