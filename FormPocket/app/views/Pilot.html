@@ -1,6 +1,7 @@
 ﻿<style>
     .dx-toolbar {
-        display: none
+    background-color:white;
+    text-align:center
     }
 
     .dx-popup-content {
@@ -10,10 +11,9 @@
     .button {
         color: white;
         height: 5%;
-        width: 30%;
+        width: 48%;
         padding: 5px;
         border-radius: 5px;
-        bottom: 0;
         position: fixed
     }
 </style>
@@ -21,19 +21,18 @@
 <body>
     <div style="height:100%">
         <div class="box  maincontainer" style="height:100%;overflow-y:hidden;max-width:1200px;margin:0 auto 0 auto">
-            <div style="height:100%">test</div>
+            <div style="height:100%"></div>
 
             <div id="popup_new" dx-popup="popup_new">
                 <div style="background-color:white;height:100%;width:100%">
-                    <p>test test test test test</p>
-                    <div class="asrBtn button" dx-button="btn_asr" style="background-color: #99e600">ASR</div>
+                    <div class="asrBtn button" dx-button="btn_asr" style="background-color:#99e600;width:96% !important; margin:2% 2% 2% 2%">ASR</div>
                 </div>
             </div>
             <div id="popup_ASR" dx-popup="popup_ASR">
                 <div style="background-color:white;height:100%;width:100%">
-                    <p>asr asr asr asr asr</p>
-                    <div class="button" dx-button="btn_save" style="background-color: #99e600;margin:0 0 2% 2%"></div>
-                    <div class="button" dx-button="btn_close" style="background-color: #ff0000;margin:0% 0% 2% 34%"></div>
+                   
+                    <div class="button" dx-button="btn_save" style="background-color: #99e600;margin:0 0 2% 1%;bottom: 0"></div>
+                    <div class="button" dx-button="btn_close" style="background-color: #ff0000;margin:0% 0% 2% 50%;bottom: 0;"></div>
                 </div>
             </div>
             <div class="rowx footer app-footer" ng-include="'app/views/Footer.html'" ng-init="type = 'appPilot';" style="padding:0;flex:0 0 45px" ng-click="btn_new()"></div>

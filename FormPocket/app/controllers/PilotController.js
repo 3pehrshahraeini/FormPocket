@@ -27,13 +27,11 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
 
     $scope.visiblePopup = false;
     $scope.popup_ASR = {
-        shading: false,
         fullScreen: true,
         showTitle: true,
+        title:"ASR Form",
         dragEnabled: true,
-
-        visible: false,
-
+        visible: true,
         closeOnOutsideClick: false,
        
         bindingOptions: {
