@@ -78,6 +78,36 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         }
     };
 
+    ///////////2020-12-19////////////////
+    $scope.entityASR = {
+        eventTypeId:null,
+    };
+    $scope.ds_eventType = [
+        { id: 1, title: 'SECURITY EVENT' },
+        { id: 2, title: 'AIRPROX/ATC' },
+        { id: 3, title: 'TCAS RA' },
+        { id: 4, title: 'WAKE TURBULENCE' },
+        { id: 5, title: 'BIRD STRIKE' },
+        { id: 6, title: 'OTHERS' },
+    ];
+    $scope.sb_eventType = {
+
+        showClearButton: false,
+        searchEnabled: false,
+        dataSource: $scope.ds_eventType,
+        displayExpr: 'title',
+        valueExpr: 'id',
+        onSelectionChanged: function (e) {
+            
+        },
+        bindingOptions: {
+            value: 'entityASR.eventTypeId',
+
+        }
+    };
+
+    ////////////////////////////
+
     
 
 }]);
