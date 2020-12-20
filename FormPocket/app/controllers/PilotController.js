@@ -81,8 +81,7 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
     ///////////2020-12-19////////////////
     $scope.entityASR = {
         eventTypeId: null,
-        flightPhaseId: null
-
+        flightPhaseId: null,
         eventTypeId: null,
     };
     $scope.ds_eventType = [
