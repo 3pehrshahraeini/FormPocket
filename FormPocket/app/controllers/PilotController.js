@@ -1,12 +1,12 @@
 ﻿'use strict';
 app.controller('PilotController', ['$scope', '$location', '$routeParams', '$rootScope', '$route', function ($scope, $location, $routeParams, $rootScope, $route) {
 
-    
+
     $scope.$on('new_popup', function (event, prms) {
         $scope.popup_new_visible = true;
     });
 
-    
+
 
 
     $scope.popup_new_visible = false;
@@ -15,18 +15,18 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         fullScreen: true,
         showTitle: true,
         dragEnabled: true,
-        title:'Pilot Forms',
+        title: 'Pilot Forms',
         visible: false,
 
         closeOnOutsideClick: false,
         toolbarItems: [
- 
+
             { widget: 'dxButton', location: 'after', options: { type: 'danger', text: 'Close', icon: 'remove', onClick: function (e) { $scope.popup_new_visible = false; } }, toolbar: 'bottom' }
         ],
         bindingOptions: {
             visible: 'popup_new_visible',
 
-          
+
         }
     };
 
@@ -35,7 +35,7 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
     $scope.popup_ASR = {
         fullScreen: true,
         showTitle: true,
-        title:"ASR Form",
+        title: "ASR Form",
         dragEnabled: true,
         visible: true,
         closeOnOutsideClick: false,
@@ -44,15 +44,15 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
 
             {
                 widget: 'dxButton', location: 'after', options: {
-                    type: 'success', text: 'Save', icon: 'check', validationGroup: 'asr',   onClick: function (arg) {
-                        
+                    type: 'success', text: 'Save', icon: 'check', validationGroup: 'asr', onClick: function (arg) {
+
                         //var result = arg.validationGroup.validate();
 
                         //if (!result.isValid) {
                         //    General.ShowNotify(Config.Text_FillRequired, 'error');
                         //    return;
                         //}
-                        
+
                     },
 
 
@@ -66,21 +66,24 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         }
     };
 
-    
+
 
     $scope.btn_asr = {
         text: 'ASR',
         type: 'normal',
-        width:'100%',
+        width: '100%',
         onClick: function (e) {
             $scope.popup_ASR_visible = true;
-            
+
         }
     };
 
     ///////////2020-12-19////////////////
     $scope.entityASR = {
-        eventTypeId:null,
+        eventTypeId: null,
+        flightPhaseId: null
+
+        eventTypeId: null,
     };
     $scope.ds_eventType = [
         { id: 1, title: 'SECURITY EVENT' },
@@ -98,7 +101,7 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         displayExpr: 'title',
         valueExpr: 'id',
         onSelectionChanged: function (e) {
-            
+
         },
         bindingOptions: {
             value: 'entityASR.eventTypeId',
@@ -106,8 +109,39 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         }
     };
 
+
+    $scope.ds_flightPhase = [
+        { id: 1, title: 'TOWING' },
+        { id: 2, title: 'PARKING' },
+        { id: 3, title: 'PUSHBACK' },
+        { id: 4, title: 'TAXI OUT' },
+        { id: 5, title: 'TAKE OFF' },
+        { id: 6, title: 'INITIAL CLIMB' },
+        { id: 7, title: 'CLIMB' },
+        { id: 8, title: 'CRUISE' },
+        { id: 9, title: 'DESCENT' },
+        { id: 10, title: 'HOLDING' },
+        { id: 11, title: 'APPROACH' },
+        { id: 12, title: 'LANDING' },
+    ]
+    $scope.sb_flightPhase = {
+
+        showClearButton: false,
+        searchEnabled: false,
+        dataSource: $scope.ds_flightPhase,
+        displayExpr: 'title',
+        valueExpr: 'id',
+        onSelectionChanged: function (e) {
+
+        },
+        bindingOptions: {
+            value: 'entityASR.flightPhaseId',
+
+        }
+    };
+
     ////////////////////////////
 
-    
+
 
 }]);
