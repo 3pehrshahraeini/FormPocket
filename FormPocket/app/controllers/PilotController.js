@@ -137,6 +137,54 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         }
     };
 
+
+    $scope.ds_runwayCondition = [
+        { id: 1, title: 'DRY' },
+        { id: 2, title: 'WET' },
+        { id: 3, title: 'ICE' },
+        { id: 4, title: 'SNOW' },
+        { id: 5, title: 'SLUSH' }
+    ]
+    $scope.sb_runwayCondition = {
+
+        showClearButton: false,
+        searchEnabled: false,
+        dataSource: $scope.ds_runwayCondition,
+        displayExpr: 'title',
+        valueExpr: 'id',
+        onSelectionChanged: function (e) {
+
+        },
+        bindingOptions: {
+            value: 'entityASR.runwayConditionID',
+
+        }
+    };
+
+    $scope.ds_significantWx = [
+        { id: 1, title: 'RAIN' },
+        { id: 2, title: 'SNOW' },
+        { id: 3, title: 'ICING' },
+        { id: 4, title: 'TURBULENCE' },
+        { id: 5, title: 'HAIL' },
+        { id: 6, title: 'STANDING WATER' },
+        { id: 7, title: 'WINDSHEAR' },
+    ]
+    $scope.sb_significantWx = {
+
+        showClearButton: false,
+        searchEnabled: false,
+        dataSource: $scope.ds_significantWx,
+        displayExpr: 'title',
+        valueExpr: 'id',
+        onSelectionChanged: function (e) {
+
+        },
+        bindingOptions: {
+            value: 'entityASR.significantWxID',
+
+        }
+    };
     ////////////////////////////
 
 
