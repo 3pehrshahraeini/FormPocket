@@ -35,30 +35,51 @@
 
         </div>
         <div id="popup_ASR" dx-popup="popup_ASR">
-            <div class="col-lg-4 col-sm-6 col-md-6 padding-7 dx-border">
-                <label>1.Type of Event</label>
-                <div dx-select-box="sb_eventType"></div>
-            </div>
+            <div dx-scroll-view="scroll_asr" style="padding:0px 0px 0 0;margin-top: 5px">
+                <div class="col-lg-4 col-sm-6 col-md-6 padding-7 dx-border">
+                    <label>1.Type of Event</label>
+                    <div dx-select-box="sb_eventType"></div>
+                </div>
 
 
-            <div class="col-lg-4 col-sm-6 col-md-6 padding-7 dx-border">
-                <label>16.FLIGHT PHASE</label>
-                <div dx-select-box="sb_flightPhase"></div>
-            </div>
-            
-            
-            <div class="col-lg-4 col-sm-6 col-md-6 padding-7 dx-border">
-                <label>20.SIGNIFICANT WX</label>
-                <div dx-select-box="sb_significantWx"></div>
-            </div>
-            
-            
-            <div class="col-lg-4 col-sm-6 col-md-6 padding-7 dx-border">
-                <label>21.RUNWAY CONDITION</label>
-                <div dx-select-box="sb_runwayCondition"></div>
-            </div>
+                <div class="col-lg-4 col-sm-6 col-md-6 padding-7 dx-border">
+                    <label>16.FLIGHT PHASE</label>
+                    <div dx-select-box="sb_flightPhase"></div>
+                </div>
+                <div class="  col-sm-6 col-md-6 padding-7 dx-border">
+                    <label>17.LOCATION</label>
+                    <div class="col-lg-4 col-sm-6 col-md-4 padding-7 dx-border">
+                        <label style="color:gray">AIRPORT</label>
+                        <div dx-text-box="txtLocationAirport"></div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-md-4 padding-7 dx-border">
+                        <label style="color:gray">STAND</label>
+                        <div dx-text-box="txtLocationStand"></div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-md-4 padding-7 dx-border">
+                        <label style="color:gray">RUNWAY</label>
+                        <div dx-text-box="txtLocationRunway"></div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 col-md-4 padding-7 dx-border">
+                        <label style="color:gray">GEOGRAPHICAL POSITION</label>
+                        <div dx-number-box="numLocationLat"></div>
+                        <div dx-number-box="numLocationLng" style="margin-top:5px"></div>
+                    </div>
+                </div>
 
 
+                <div class="col-lg-4 col-sm-6 col-md-6 padding-7 dx-border">
+                    <label>20.SIGNIFICANT WX</label>
+                    <div dx-select-box="sb_significantWx"></div>
+                </div>
+
+
+                <div class="col-lg-4 col-sm-6 col-md-6 padding-7 dx-border">
+                    <label>21.RUNWAY CONDITION</label>
+                    <div dx-select-box="sb_runwayCondition"></div>
+                </div>
+
+            </div>
         </div>
     </div>
 </body>

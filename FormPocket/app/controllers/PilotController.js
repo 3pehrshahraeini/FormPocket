@@ -185,6 +185,43 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
 
         }
     };
+    //---- 2020-12-28 -----------------
+    $scope.scroll_height = $(window).height() - 105;
+    $scope.scroll_asr = {
+        scrollByContent: true,
+        scrollByThumb: true,
+        bindingOptions: {
+            height: 'scroll_height',
+        }
+        
+    };
+
+
+    $scope.txtLocationAirport = {
+        bindingOptions: {
+            value:'entityASR.locationAirport',
+        }
+    };
+    $scope.txtLocationStand = {
+        bindingOptions: {
+            value: 'entityASR.locationAirport',
+        }
+    };
+    $scope.txtLocationStand = {
+        bindingOptions: {
+            value: 'entityASR.locationStand',
+        }
+    };
+    $scope.numLocationLat = {
+        bindingOptions: {
+            value: 'entityASR.locationLat',
+        }
+    };
+    $scope.numLocationLng = {
+        bindingOptions: {
+            value: 'entityASR.locationLng',
+        }
+    };
     ////////////////////////////
 
 
