@@ -26,7 +26,6 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         bindingOptions: {
             visible: 'popup_new_visible',
 
-
         }
     };
 
@@ -222,8 +221,83 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
             value: 'entityASR.locationLng',
         }
     };
-    ////////////////////////////
 
+
+
+    $scope.numAP = {
+        bindingOptions: {
+            value: 'entityASR.AP',
+        }
+    };
+    $scope.numATHR = {
+        bindingOptions: {
+            value: 'entityASR.ATHR',
+        }
+    };
+    $scope.numGear = {
+        bindingOptions: {
+            value: 'entityASR.Gear',
+        }
+    };
+    $scope.numFlap = {
+        bindingOptions: {
+            value: 'entityASR.Flap',
+        }
+    };
+    $scope.numSlat = {
+        bindingOptions: {
+            value: 'entityASR.Slat',
+        }
+    };
+    $scope.numSpoilers = {
+        bindingOptions: {
+            value: 'entityASR.Spoilers',
+        }
+    };
+
+
+
+
+
+    $scope.numAltitude = {
+        bindingOptions: {
+            value: 'entityASR.Altitude',
+        }
+    };
+    
+    $scope.numSpeed = {
+        bindingOptions: {
+            value: 'entityASR.Speed',
+        }
+    };
+
+    $scope.numACWeight = {
+        bindingOptions: {
+            value: 'entityASR.ACWeight',
+        }
+    };
+
+    $scope.txtEventSummary = {
+        bindingOptions: {
+            value: 'entityASR.EventSummary',
+        }
+    };
+
+    $scope.txtAction = {
+        bindingOptions: {
+            value: 'entityASR.Action',
+        }
+    };
+
+    $scope.txtOtherInfo = {
+        bindingOptions: {
+            value: 'entityASR.OtherInfo',
+        }
+    };
+
+
+
+    ////////////////////////////
 
 
 }]);
