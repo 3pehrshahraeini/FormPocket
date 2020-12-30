@@ -67,6 +67,32 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
 
 
 
+    $scope.entityASR = {
+        eventTypeId: null,
+        flightPhaseId: null,
+        locationAirportId: null,
+        locationStandId: null,
+        LocationRunwayId:null,
+        locationLatId: null,
+        locationLngId: null,
+        significantWxId: null,
+        runwayConditionId:null,
+        APId: null,
+        ATHRId: null,
+        GearId: null,
+        FlapId: null,
+        SlatId: null,
+        SpoilersId: null,
+        AltitudeId: null,
+        SpeedId: null,
+        ACWeightId: null,
+        EventSummaryId: null,
+        ActionId: null,
+        OtherInfoId: null
+    };
+
+
+
     $scope.btn_asr = {
         text: 'ASR',
         type: 'normal',
@@ -77,10 +103,7 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         }
     };
 
-    $scope.entityASR = {
-        eventTypeId: null,
-        flightPhaseId: null
-    };
+ 
     $scope.ds_eventType = [
         { id: 1, title: 'SECURITY EVENT' },
         { id: 2, title: 'AIRPROX/ATC' },
@@ -155,7 +178,7 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
 
         },
         bindingOptions: {
-            value: 'entityASR.runwayConditionID',
+            value: 'entityASR.runwayConditionId',
 
         }
     };
@@ -180,7 +203,7 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
 
         },
         bindingOptions: {
-            value: 'entityASR.significantWxID',
+            value: 'entityASR.significantWxId',
 
         }
     };
@@ -194,104 +217,102 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         }
         
     };
-
-
+   
     $scope.txtLocationAirport = {
         bindingOptions: {
-            value:'entityASR.locationAirport',
+            value:'entityASR.locationAirportId',
         }
     };
     $scope.txtLocationStand = {
         bindingOptions: {
-            value: 'entityASR.locationAirport',
+            value: 'entityASR.locationAirportId',
         }
     };
-    $scope.txtLocationStand = {
+    $scope.txtLocationRunway = {
         bindingOptions: {
-            value: 'entityASR.locationStand',
+            value: 'entityASR.LocationRunwayId',
         }
     };
     $scope.numLocationLat = {
         bindingOptions: {
-            value: 'entityASR.locationLat',
+            value: 'entityASR.locationLatId',
         }
     };
     $scope.numLocationLng = {
         bindingOptions: {
-            value: 'entityASR.locationLng',
+            value: 'entityASR.locationLngId',
         }
     };
 
 
-
+    
     $scope.numAP = {
         bindingOptions: {
-            value: 'entityASR.AP',
+            value: 'entityASR.APId',
         }
     };
     $scope.numATHR = {
         bindingOptions: {
-            value: 'entityASR.ATHR',
+            value: 'entityASR.ATHRId',
         }
     };
     $scope.numGear = {
         bindingOptions: {
-            value: 'entityASR.Gear',
+            value: 'entityASR.GearId',
         }
     };
     $scope.numFlap = {
         bindingOptions: {
-            value: 'entityASR.Flap',
+            value: 'entityASR.FlapId',
         }
     };
     $scope.numSlat = {
         bindingOptions: {
-            value: 'entityASR.Slat',
+            value: 'entityASR.SlatId',
         }
     };
     $scope.numSpoilers = {
         bindingOptions: {
-            value: 'entityASR.Spoilers',
+            value: 'entityASR.SpoilersId',
         }
     };
 
 
 
-
-
+    
     $scope.numAltitude = {
         bindingOptions: {
-            value: 'entityASR.Altitude',
+            value: 'entityASR.AltitudeId',
         }
     };
     
     $scope.numSpeed = {
         bindingOptions: {
-            value: 'entityASR.Speed',
+            value: 'entityASR.SpeedId',
         }
     };
 
     $scope.numACWeight = {
         bindingOptions: {
-            value: 'entityASR.ACWeight',
+            value: 'entityASR.ACWeightId',
         }
     };
 
     $scope.txtEventSummary = {
         bindingOptions: {
-            value: 'entityASR.EventSummary',
+            value: 'entityASR.EventSummaryId',
         }
     };
 
     $scope.txtAction = {
         bindingOptions: {
-            value: 'entityASR.Action',
+            value: 'entityASR.ActionId',
         }
     };
 
     $scope.txtOtherInfo = {
         bindingOptions: {
-            value: 'entityASR.OtherInfo',
+            value: 'entityASR.OtherInfoId',
         }
     };
 
