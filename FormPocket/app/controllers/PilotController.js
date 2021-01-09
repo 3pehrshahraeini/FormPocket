@@ -66,6 +66,32 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
     };
 
 
+    $scope.popup_birdStrike_visible = false;
+    $scope.popup_birdStrike = {
+        fullScreen: true,
+        showTitle: true,
+        title: "BIRD STRIKE",
+        dragEnabled: true,
+        visible: true,
+        closeOnOutsideClick: false,
+        toolbarItems: [
+
+            {
+                widget: 'dxButton', location: 'after', options: {
+                    type: 'success', text: 'Save', icon: 'check', validationGroup: 'asr', onClick: function (arg) {
+
+                    },
+
+
+                }, toolbar: 'bottom'
+            },
+
+            { widget: 'dxButton', location: 'after', options: { type: 'danger', text: 'Close', icon: 'remove', onClick: function (e) { $scope.popup_birdStrike_visible = false; } }, toolbar: 'bottom' }
+        ],
+        bindingOptions: {
+            visible: 'popup_birdStrike_visible',
+        }
+    };
 
     $scope.entityASR = {
         eventTypeId: null,
@@ -99,6 +125,17 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         width: '100%',
         onClick: function (e) {
             $scope.popup_ASR_visible = true;
+
+        }
+    };
+
+ 
+    $scope.btn_birdStrike = {
+        text: 'BIRD STRIKE',
+        type: 'normal',
+        width: '100%',
+        onClick: function (e) {
+            $scope.popup_birdStrike_visible = true;
 
         }
     };
