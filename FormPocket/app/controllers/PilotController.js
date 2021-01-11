@@ -65,7 +65,7 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
         }
     };
 
-
+    //1/11/21
     $scope.popup_birdStrike_visible = false;
     $scope.popup_birdStrike = {
         fullScreen: true,
