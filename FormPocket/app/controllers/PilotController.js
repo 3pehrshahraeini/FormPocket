@@ -70,7 +70,7 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
     $scope.popup_voyage_report = {
         fullScreen: true,
         showTitle: true,
-        title: "BIRD STRIKE",
+        title: "COMMANDER VOYAGE REPORT",
         dragEnabled: true,
         visible: true,
         closeOnOutsideClick: false,
@@ -352,8 +352,32 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
             value: 'entityASR.OtherInfoId',
         }
     };
+    //// 2021-01-12
+    $scope.scroll_voyage = {
+        scrollByContent: true,
+        scrollByThumb: true,
+        bindingOptions: {
+            height: 'scroll_height',
+        }
 
+    };
 
+    $scope.entityVoyage = {
+        cancellation: false,
+
+        technical: false,
+       
+    };
+    $scope.chb_cancellation = {
+        bindingOptions: {
+            value: 'entityVoyage.cancellation',
+        }
+    };
+    $scope.chb_technical = {
+        bindingOptions: {
+            value: 'entityVoyage.technical',
+        }
+    };
 
     ////////////////////////////
 
