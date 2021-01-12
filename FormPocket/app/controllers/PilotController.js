@@ -66,8 +66,8 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
     };
 
     //1/11/21
-    $scope.popup_birdStrike_visible = false;
-    $scope.popup_birdStrike = {
+    $scope.popup_voyage_report_visible = false;
+    $scope.popup_voyage_report = {
         fullScreen: true,
         showTitle: true,
         title: "BIRD STRIKE",
@@ -86,10 +86,10 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
                 }, toolbar: 'bottom'
             },
 
-            { widget: 'dxButton', location: 'after', options: { type: 'danger', text: 'Close', icon: 'remove', onClick: function (e) { $scope.popup_birdStrike_visible = false; } }, toolbar: 'bottom' }
+            { widget: 'dxButton', location: 'after', options: { type: 'danger', text: 'Close', icon: 'remove', onClick: function (e) { $scope.popup_voyage_report_visible = false; } }, toolbar: 'bottom' }
         ],
         bindingOptions: {
-            visible: 'popup_birdStrike_visible',
+            visible: 'popup_voyage_report_visible',
         }
     };
 
@@ -130,13 +130,13 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
     };
 
  
-    $scope.btn_birdStrike = {
-        text: 'BIRD STRIKE',
+    $scope.btn_voyage_report = {
+        text: 'COMMANDER VOYAGE REPORT',
         type: 'normal',
         width: '100%',
         onClick: function (e) {
-            $scope.popup_birdStrike_visible = true;
-
+            $scope.popup_voyage_report_visible = true;
+            console.log("hey")
         }
     };
 
