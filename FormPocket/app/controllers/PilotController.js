@@ -364,13 +364,45 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
 
     $scope.entityVoyage = {
         cancellation: false,
+        return: false,
+        diversion: false,
+        abn: false,
+        delay: false,
 
         technical: false,
-       
+        atc: false,
+        security: false,
+        fltOps: false,
+        aircraftLateArrival: false,
+        paxHandling: false,
+        catering: false,
+        weather: false,
+        rampHandling: false,
+        other: false
     };
     $scope.chb_cancellation = {
         bindingOptions: {
             value: 'entityVoyage.cancellation',
+        }
+    };
+    $scope.chb_retunr = {
+        bindingOptions: {
+            value: 'entityVoyage.return',
+        }
+    };
+    $scope.chb_diversion = {
+        bindingOptions: {
+            value: 'entityVoyage.diversion',
+        }
+    };
+    $scope.chb_abn = {
+        bindingOptions: {
+            value: 'entityVoyage.abn',
+        }
+    };
+    $scope.chb_delay = {
+        bindingOptions: {
+            value: 'entityVoyage.delay',
         }
     };
     $scope.chb_technical = {
@@ -378,7 +410,51 @@ app.controller('PilotController', ['$scope', '$location', '$routeParams', '$root
             value: 'entityVoyage.technical',
         }
     };
-
+     $scope.chb_atc = {
+        bindingOptions: {
+            value: 'entityVoyage.atc',
+        }
+    };
+     $scope.chb_security = {
+        bindingOptions: {
+            value: 'entityVoyage.security',
+        }
+    };
+     $scope.chb_fltOps = {
+        bindingOptions: {
+            value: 'entityVoyage.fltOps',
+        }
+    };
+    $scope.chb_aircraftLateApproval = {
+        bindingOptions: {
+            value: 'entityVoyage.aircraftLateArrival',
+        }
+    };
+    $scope.chb_paxHandling = {
+        bindingOptions: {
+            value: 'entityVoyage.paxHandling',
+        }
+    };
+     $scope.chb_catering = {
+        bindingOptions: {
+            value: 'entityVoyage.catering',
+        }
+    };
+     $scope.chb_weather = {
+        bindingOptions: {
+            value: 'entityVoyage.weather',
+        }
+    };
+    $scope.chb_rampHandling = {
+        bindingOptions: {
+            value: 'entityVoyage.rampHandling',
+        }
+    };
+    $scope.chb_other = {
+        bindingOptions: {
+            value: 'entityVoyage.other',
+        }
+    };
     ////////////////////////////
 
 
